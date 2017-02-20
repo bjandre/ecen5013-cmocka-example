@@ -7,6 +7,10 @@
 cmocka is included in this repository as a git subtree. See
 3rd-party/README.md for details.
 
+## Requirements
+
+* cmake - available through most package managers.
+
 ## Build
 
 * building cmocka:

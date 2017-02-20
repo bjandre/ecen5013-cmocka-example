@@ -72,13 +72,13 @@ $(LIB) : $(LIB_OBJS)
 all : $(LIB) $(EXE)
 
 $(EXE) : $(EXE_OBJS) $(LIB)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ -lm
 
 test : $(TEST_QUADRATIC_EXE)
 	./$(TEST_QUADRATIC_EXE)
 
 $(TEST_QUADRATIC_EXE) : $(TEST_QUADRATIC_SRCS) $(LIB)
-	$(CC) $(CFLAGS) -o $@ $^ $(CMOCKA_LIBRARY)
+	$(CC) $(CFLAGS) -o $@ $^ $(CMOCKA_LIBRARY) -lm
 
 
 .PHONY : clean
